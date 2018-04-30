@@ -33,7 +33,6 @@ data.each do |x|
       end
       h[parent.to_sym] = array
       pigeon_list["Theo"] = h
-      puts pigeon_list
     end
 end
 h = {}
@@ -46,7 +45,6 @@ data.each do |x|
       end
       h[parent.to_sym] = array
       pigeon_list["Peter Jr."] = h
-      puts pigeon_list
     end
 end
 h = {}
@@ -59,7 +57,6 @@ data.each do |x|
       end
       h[parent.to_sym] = array
       pigeon_list["Peter Jr."] = h
-      puts pigeon_list
     end
 end
 h = {}
@@ -72,7 +69,6 @@ data.each do |x|
       end
       h[parent.to_sym] = array
       pigeon_list["Lucky"] = h
-      puts pigeon_list
     end
 end
 h = {}
@@ -85,7 +81,6 @@ data.each do |x|
       end
       h[parent.to_sym] = array
       pigeon_list["Queenie"] = h
-      puts pigeon_list
     end
 end
 h = {}
@@ -98,7 +93,6 @@ data.each do |x|
       end
       h[parent.to_sym] = array
       pigeon_list["Alex"] = h
-      puts pigeon_list
     end
 end
 h = {}
@@ -111,7 +105,6 @@ data.each do |x|
       end
       h[parent.to_sym] = array
       pigeon_list["Ms. K"] = h
-      puts pigeon_list
     end
 end
 h = {}
@@ -124,7 +117,6 @@ data.each do |x|
       end
       h[parent.to_sym] = array
       pigeon_list["Andrew"] = h
-      puts pigeon_list
     end
 end
 
