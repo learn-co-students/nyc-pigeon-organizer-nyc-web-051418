@@ -17,16 +17,24 @@ def nyc_pigeon_organizer(data)
         data.each do |color_key, color_birds|
           color_birds.each do |specific_color_key , name_array|
             
-            binding.pry
+            #binding.pry
             if name_array.include?(name)
               pigeon_list[name] = {}
+            end #end if name_array include
+          
+            #binding.pry
+            
+            if pigeon_list[name][:color].nil? || pigeon_list[name][:color].empty?
               
+              pigeon_list[name][:color] = []
+              pigeon_list[name][:color] << color_birds
             end  
-          end
-        
-        end #end second_hash
-        
-        pigeon_list[name] = second_hash
+          
+          
+          
+            
+          end #end color_birds each
+        end #end data each
         
       end #name_array each  
     end #end color_birds each
