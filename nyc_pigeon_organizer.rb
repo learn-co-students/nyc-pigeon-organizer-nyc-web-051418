@@ -4,6 +4,7 @@ def nyc_pigeon_organizer(data)
   
   pigeon_list = {}
   second_hash = {}
+  second_hash_array = []
 
   data.each do |color_key, color_birds|
     color_birds.each do |specific_color_key , name_array|
@@ -15,8 +16,10 @@ def nyc_pigeon_organizer(data)
         
         data.each do |color_key, color_birds|
           color_birds.each do |specific_color_key , name_array|
+            
+            binding.pry
             if name_array.include?(name)
-              second_hash[color_key] = specific_color_key.to_s
+              pigeon_list[name] = {}
               
             end  
           end
