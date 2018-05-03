@@ -14,16 +14,32 @@ def nyc_pigeon_organizer(data)
         
         data.each do |color_key, color_birds|
           bottom_level.each do |name|
+            pigeon_list[name] = {color_key => [specific_color_key.to_s]}
+            
+         #   binding.pry
+            
+            
+            
+            
             
             #binding.pry
 
-            if bottom_level.include?(name)
-              
-              
+         #   if bottom_level.include?(name)
             
-              pigeon_list[name] = {color_key => [specific_color_key.to_s]}
+              
               #binding.pry
-            end #end if name_array include
+          #  end #end if name_array include
+            
+          #   data.each do |color_key, color_birds|
+          # bottom_level.each do |name|
+            
+          #   #binding.pry
+
+          #   if bottom_level.include?(name)
+            
+          #     pigeon_list[name] = {color_key => [specific_color_key.to_s]}
+          #     #binding.pry
+          #   end #end if name_array include
             
             
           
