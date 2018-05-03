@@ -1,5 +1,7 @@
 require 'pry'
 
+x = nil
+
 def nyc_pigeon_organizer(data)
   
   pigeon_list = {}
@@ -8,19 +10,14 @@ def nyc_pigeon_organizer(data)
     group_details.each do |c_g_l_specific, bottom_level|
       bottom_level.each do |bottom_level_specific|  
         
-        #binding.pry
-        if !!pigeon_list[bottom_level_specific]  
-           pigeon_list[bottom_level_specific][c_g_l_symbols] << (c_g_l_specific.to_s)
-           
-        # elsif !!pigeon_list[bottom_level_specific][c_g_l_symbols]
-        #     pigeon_list[bottom_level_specific] = {c_g_l_symbols => [c_g_l_specific.to_s]}
-           
-        else  
-          pigeon_list[bottom_level_specific] = {c_g_l_symbols => [c_g_l_specific.to_s]}
-        end  
         
-       # binding.pry
-    
+        #if !!pigeon_list[bottom_level_specific]
+        # x = 5
+        
+        else
+          pigeon_list[bottom_level_specific] = {c_g_l_symbols => [c_g_l_specific.to_s]}
+        end
+  
       end #end bottom_level each 
     end #end group details each
   end #end data each
@@ -28,6 +25,24 @@ def nyc_pigeon_organizer(data)
   pigeon_list
   binding.pry
 end #end big method
+
+
+
+
+        
+        #binding.pry
+        # if !!pigeon_list[bottom_level_specific]  
+        #   pigeon_list[bottom_level_specific][c_g_l_symbols] << (c_g_l_specific.to_s)
+           
+        # # elsif !!pigeon_list[bottom_level_specific][c_g_l_symbols]
+        # #     pigeon_list[bottom_level_specific] = {c_g_l_symbols => [c_g_l_specific.to_s]}
+           
+        #else  
+          #pigeon_list[bottom_level_specific] = {c_g_l_symbols => [c_g_l_specific.to_s]}
+        #end  
+        
+       # binding.pry
+    
 
 # if !!pigeon_list[bottom_level_specific][color_gender_lives_specific.to_s]
 #           #pigeon_list[bottom_level_specific][color_gender_lives_specific.to_s] << bottom_level_specific
