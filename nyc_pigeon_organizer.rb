@@ -18,10 +18,15 @@ def nyc_pigeon_organizer(data)
             #binding.pry
 
             if bottom_level.include?(name)
-              pigeon_list[name] = {color_key => specific_color_key}
-            end #end if name_array include
-          
+              
+              
             
+              pigeon_list[name] = {color_key => [specific_color_key.to_s]}
+              #binding.pry
+            end #end if name_array include
+            
+            
+          
             
             # if pigeon_list[name][:color] == nil
             #   #binding.pry
