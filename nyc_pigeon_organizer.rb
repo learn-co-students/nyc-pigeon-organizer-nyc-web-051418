@@ -1,6 +1,5 @@
 require 'pry'
 
-x = nil
 
 def nyc_pigeon_organizer(data)
   
@@ -8,22 +7,21 @@ def nyc_pigeon_organizer(data)
   
   data.each do |c_g_l_symbols, group_details|
     group_details.each do |c_g_l_specific, bottom_level|
-      bottom_level.each do |bottom_level_specific|  
+      bottom_level.each do |name|  
+        pigeon_list[name] ||= {}
+          pigeon_list[name][c_g_l_symbols] ||= []
+            pigeon_list[name][c_g_l_symbols] << c_g_l_specific.to_s
+            
         
-        
-        #if !!pigeon_list[bottom_level_specific]
-        # x = 5
-        
-        else
-          pigeon_list[bottom_level_specific] = {c_g_l_symbols => [c_g_l_specific.to_s]}
-        end
+         #binding.pry
+
   
       end #end bottom_level each 
     end #end group details each
   end #end data each
   
   pigeon_list
-  binding.pry
+  #binding.pry
 end #end big method
 
 
