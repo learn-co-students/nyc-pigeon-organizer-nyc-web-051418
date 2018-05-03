@@ -16,21 +16,33 @@ def nyc_pigeon_organizer(data)
           bottom_level.each do |name|
             
             #binding.pry
+
             if bottom_level.include?(name)
-              pigeon_list[name] = {}
+              pigeon_list[name] = {color_key => specific_color_key}
             end #end if name_array include
           
             
             
-            if pigeon_list[name][:color] == nil
-              #binding.pry
-              pigeon_list[name][:color] = []
-              
-              
-            end 
+            # if pigeon_list[name][:color] == nil
+            #   #binding.pry
+            #   pigeon_list[name][:color] = []
+            # end 
+            
+            
             #binding.pry
-          pigeon_list[name][:color] << bottom_level
+          # pigeon_list[name][:color] << bottom_level
           
+
+          #   if name_array.include?(name)
+          #     pigeon_list[name] = {}
+          #   end #end if name_array include
+          
+            
+          
+            # #$if pigeon_list[name][color_key] 
+            #   pigeon_list[name][color_key] << specific_color_key
+            # #end
+
           
             
           end #end color_birds each
