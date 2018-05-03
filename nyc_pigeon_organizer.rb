@@ -3,75 +3,51 @@ require 'pry'
 def nyc_pigeon_organizer(data)
   
   pigeon_list = {}
-
-  data.each_pair do |color_key, color_birds|
-    color_birds.each do |specific_color_key , bottom_level|
-      bottom_level.each do |name|
+  
+  data.each do |color_gender_lives_symbols, group_details|
+    group_details.each do |color_gender_lives_specific, bottom_level|
+      bottom_level.each do |bottom_level_specific|  
         
+        binding.pry
         
+        if !!pigeon_list[bottom_level_specific][color_gender_lives_specific.to_s]
+          pigeon_list[bottom_level_specific][color_gender_lives_specific.to_s] << bottom_level_specific
         
-        #binding.pry
-        
-        data.each do |color_key, color_birds|
-          bottom_level.each do |name|
-            pigeon_list[name] = {color_key => [specific_color_key.to_s]}
-            
-         #   binding.pry
-            
-            
-            
-            
-            
-            #binding.pry
-
-         #   if bottom_level.include?(name)
-            
-              
-              #binding.pry
-          #  end #end if name_array include
-            
-          #   data.each do |color_key, color_birds|
-          # bottom_level.each do |name|
-            
-          #   #binding.pry
-
-          #   if bottom_level.include?(name)
-            
-          #     pigeon_list[name] = {color_key => [specific_color_key.to_s]}
-          #     #binding.pry
-          #   end #end if name_array include
-            
-            
-          
-            
-            # if pigeon_list[name][:color] == nil
-            #   #binding.pry
-            #   pigeon_list[name][:color] = []
-            # end 
-            
-            
-            #binding.pry
-          # pigeon_list[name][:color] << bottom_level
-          
-
-          #   if name_array.include?(name)
-          #     pigeon_list[name] = {}
-          #   end #end if name_array include
-          
-            
-          
-            # #$if pigeon_list[name][color_key] 
-            #   pigeon_list[name][color_key] << specific_color_key
-            # #end
-
-          
-            
-          end #end color_birds each
-        end #end data each
-        
-      end #name_array each  
-    end #end color_birds each
+        elsif !!pigeon_list[bottom_level_specific]
+          pigeon_list[bottom_level_specific][color_gender_lives_symbols] = [bottom_level_specific]
+        else 
+          pigeon_list[bottom_level_specific] = {color_gender_lives_symbols => [color_gender_lives_specific.to_s]}
+        end
+    binding.pry
+    
+      end #end bottom_level each 
+    end #end group details each
   end #end data each
+  
   pigeon_list
-  binding.pry
 end #end big method
+
+
+
+
+
+        
+#   data.each do |color_key, color_birds|
+#       color_birds.each do |specific_color_key , bottom_level|
+#           bottom_level.each do |name|
+           
+            
+#               # if !!pigeon_list[name][color]
+                
+#               # elsif !!pigeon_list[name] 
+                
+#               # if #check if theo color exists, then shovel more
+                
+#               #   #pigeon_list[name][color_key] = [specific_color_key.to_s]
+#               # else
+#               #   pigeon_list[name] = {color_key => [specific_color_key.to_s]}
+#               # end
+            
+#           end #end bottom_level each
+#       end #end color_birds each
+#   end #end data each
